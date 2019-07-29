@@ -17,7 +17,7 @@ class CorreiosSpider(Spider):
     def parse(self, response):
         for uf_option_value in response.xpath("//select[@class='f1col']/option/@value"):
             uf_selected = uf_option_value.get()
-            if self.is_not_uf_table(uf_selected):
+            if not self.is_uf_table(uf_selected):
 
                 formdata = {FORMDATA_UF: uf_selected}
                 self.set_ufitemloader(response, uf_selected)
@@ -27,8 +27,8 @@ class CorreiosSpider(Spider):
                                                 formdata=formdata,
                                                 callback=partial(self.parse_result,uf_selected=uf_selected))
 
-    def is_not_uf_table(self, uf_selected):
-        return uf_selected is not ''
+    def is_uf_table(self, uf_selected):
+        return uf_selected is ''
 
     def set_ufitemloader(self, response, uf_selected):
         if uf_selected not in self.created_ufs.keys():
