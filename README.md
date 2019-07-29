@@ -1,1 +1,1 @@
-# pirtes-challenge
+# pirates-challenge
