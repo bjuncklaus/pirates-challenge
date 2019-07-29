@@ -6,8 +6,6 @@ from ..items import RecordItemLoader, UfItemLoader
 from .contants import *
 
 
-
-
 class CorreiosSpider(Spider):
 
     name = 'correios'
@@ -67,7 +65,7 @@ class CorreiosSpider(Spider):
     def set_record_item(self, record_loader, uf_selected):
         uf_item = self.created_ufs[uf_selected].load_item()
         record_item = record_loader.load_item()
-        
+
         if uf_item.get(ITEM_FIELD_RECORD) is None:
             uf_item[ITEM_FIELD_RECORD] = record_item
         else:
