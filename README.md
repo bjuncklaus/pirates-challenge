@@ -18,16 +18,16 @@ Shall we capture some data now? T' execute th' code go t' thee root folder 'n ru
 Th' data should look similar t' this:
 
 ```json
-{"uf": "DF", "log": {"localidade": ["Brasu00edlia"], "faixa_de_cep": ["70000-001 a 72799-999"]}}
-{"uf": "AP", "log": {"localidade": ["Amapu00e1", "Calu00e7oene"], "faixa_de_cep": ["68950-000 a 68959-999", "68960-000 a 68972-999"]}}
+{"uf": "DF", "record": {"localidade": ["Brasu00edlia"], "faixa_de_cep": ["70000-001 a 72799-999"]}}
+{"uf": "AP", "record": {"localidade": ["Amapu00e1", "Calu00e7oene"], "faixa_de_cep": ["68950-000 a 68959-999", "68960-000 a 68972-999"]}}
 ```
+(or take a look at this [sample file](https://github.com/bjuncklaus/pirates-challenge/blob/master/data/sample.jl))
+
 
 Where `uf` be th' states acronym 'n th' `log` object contains th' data from cities o' th' specific state where `localidade` be th' name o' thee city 'n `faixa_de_cep` be th' zip code range o' that city.
 
 #### Note
-```
-A `log` can contain several cities, therefore `localidade` 'n `faixa_de_cep` are both arrays where its indexes 'ave a one-t'-one mappin' (e.g. `localidade[2]` be directly related t' `faixa_de_cep[2]`).
-```
+A `record` can contain several cities, therefore `localidade` 'n `faixa_de_cep` are both arrays where its indexes 'ave a one-t'-one mappin' (e.g. `localidade[2]` be directly related t' `faixa_de_cep[2]`).
 
 
 ---
@@ -56,10 +56,10 @@ The data should look similar to this:
 {"uf": "DF", "record": {"localidade": ["Brasu00edlia"], "faixa_de_cep": ["70000-001 a 72799-999"]}}
 {"uf": "AP", "record": {"localidade": ["Amapu00e1", "Calu00e7oene"], "faixa_de_cep": ["68950-000 a 68959-999", "68960-000 a 68972-999"]}}
 ```
+(or take a look at this [sample file](https://github.com/bjuncklaus/pirates-challenge/blob/master/data/sample.jl))
+
 
 Where `uf` is the states acronym and the `record` object contains the data from cities of the specific state where `localidade` is the name of thee city and `faixa_de_cep` is the zip code range of that city.
 
 #### Note
-```
 A `record` can contain several cities, therefore `localidade` and `faixa_de_cep` are both arrays where its indexes have a one-to-one mapping (e.g. `localidade[2]` is directly related to `faixa_de_cep[2]`).
-```
