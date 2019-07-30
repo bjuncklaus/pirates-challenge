@@ -1,0 +1,5 @@
+FROM python:3-onbuild
+VOLUME ["/usr/src/app", "/usr/src/app/data"]
+COPY . /usr/src/app
+WORKDIR /usr/src/app
+CMD ["scrapy", "crawl", "correios", "-o", "data/data.json"]
