@@ -37,7 +37,6 @@ A `record` can contain several cities, therefore `localidade` 'n `faixa_de_cep` 
 
 
 ## English version
-## Data Pirates Challenge
 This my solution for Neoway's [data pirates challenge](https://github.com/NeowayLabs/jobs/blob/master/datapirates/challengePirates.md).
 
 ### Requirements:
