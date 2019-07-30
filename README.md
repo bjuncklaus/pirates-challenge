@@ -1,5 +1,5 @@
 # Data Pirates Challenge
-##Pirate English Version
+## Pirate English Version
 This me solution fer Neoway's [data pirates challenge](https://github.com/NeowayLabs/jobs/blob/master/datapirates/challengePirates.md).
 
 ### Requirements:
@@ -24,7 +24,7 @@ Th' data should look similar t' this:
 
 Where `uf` be th' states acronym 'n th' `log` object contains th' data from cities o' th' specific state where `localidade` be th' name o' thee city 'n `faixa_de_cep` be th' zip code range o' that city.
 
-####Note
+#### Note
 ```
 A `log` can contain several cities, therefore `localidade` 'n `faixa_de_cep` are both arrays where its indexes 'ave a one-t'-one mappin' (e.g. `localidade[2]` be directly related t' `faixa_de_cep[2]`).
 ```
@@ -33,7 +33,7 @@ A `log` can contain several cities, therefore `localidade` 'n `faixa_de_cep` are
 ---
 
 
-##English version
+## English version
 ## Data Pirates Challenge
 This my solution for Neoway's [data pirates challenge](https://github.com/NeowayLabs/jobs/blob/master/datapirates/challengePirates.md).
 
@@ -59,7 +59,7 @@ The data should look similar to this:
 
 Where `uf` is the states acronym and the `record` object contains the data from cities of the specific state where `localidade` is the name of thee city and `faixa_de_cep` is the zip code range of that city.
 
-####Note
+#### Note
 ```
 A `record` can contain several cities, therefore `localidade` and `faixa_de_cep` are both arrays where its indexes have a one-to-one mapping (e.g. `localidade[2]` is directly related to `faixa_de_cep[2]`).
 ```
