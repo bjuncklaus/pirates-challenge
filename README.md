@@ -16,6 +16,9 @@ If ye wants t' run th' unit tests ye will also needs:
 
 Ye can loot 'n install th' above libs usin' [pip](https://pypi.org/project/pip/). Aft ye loot th' source code, go t' th' **root folder** 'n run `pip install -r requirements.txt`.
 
+#### Note
+I'm working on dockerizing everything on this [branch](https://github.com/bjuncklaus/pirates-challenge/tree/feature/dockerization).
+
 ### Execution:
 Shall we capture some data now? T' execute th' code go t' thee root folder 'n run `scrapy crawl correios -o data/data.jl`, this will scrapy thee data from thee [correios](http://www.buscacep.correios.com.br/sistemas/buscacep/buscaFaixaCEP.cfm) website 'n save it in th' _data folder_ fer some data analysis later!
 
@@ -50,6 +53,9 @@ If you want to run the unit tests you will also need:
 * [Requests](https://pypi.org/project/requests/) 2.22.0
 
 You can download and install the above libs using [pip](https://pypi.org/project/pip/). After you download the source code, go to the **root folder** and run `pip install -r requirements.txt`.
+
+#### Note
+I'm working on dockerizing everything on this [branch](https://github.com/bjuncklaus/pirates-challenge/tree/feature/dockerization).
 
 ### Execution:
 Shall we get some data now? To execute the code go to the root folder and run `scrapy crawl correios -o data/data.jl`, this will scrapy thee data from thee [correios](http://www.buscacep.correios.com.br/sistemas/buscacep/buscaFaixaCEP.cfm) website and save it in the _data folder_ for some data analysis later!
