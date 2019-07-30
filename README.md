@@ -8,6 +8,7 @@ This me solution fer Neoway's [data pirates challenge](https://github.com/Neoway
 ### Requirements:
 
 I **strongly suggest** ye use some sort o' virtual environment, like [virtualenv](https://virtualenv.pypa.io/en/latest/). In order t' run th' project ye will needs:
+* [Python](https://www.python.org/) 3+
 * [Scrapy](https://scrapy.org/) 1.7.2
 
 If ye wants t' run th' unit tests ye will also needs:
@@ -42,6 +43,7 @@ This my solution for Neoway's [data pirates challenge](https://github.com/Neoway
 ### Requirements:
 
 I **strongly suggest** you use some sort of virtual environment, like [virtualenv](https://virtualenv.pypa.io/en/latest/). In order to run the project you will need:
+* [Python](https://www.python.org/) 3+
 * [Scrapy](https://scrapy.org/) 1.7.2
 
 If you want to run the unit tests you will also need:
@@ -50,7 +52,7 @@ If you want to run the unit tests you will also need:
 You can download and install the above libs using [pip](https://pypi.org/project/pip/). After you download the source code, go to the **root folder** and run `pip install -r requirements.txt`.
 
 ### Execution:
-Shall we get some data now? To execute the code go to thee root folder and run `scrapy crawl correios -o data/data.jl`, this will scrapy thee data from thee [correios](http://www.buscacep.correios.com.br/sistemas/buscacep/buscaFaixaCEP.cfm) website and save it in the _data folder_ for some data analysis later!
+Shall we get some data now? To execute the code go to the root folder and run `scrapy crawl correios -o data/data.jl`, this will scrapy thee data from thee [correios](http://www.buscacep.correios.com.br/sistemas/buscacep/buscaFaixaCEP.cfm) website and save it in the _data folder_ for some data analysis later!
 
 The data should look similar to this:
 
