@@ -1,6 +1,8 @@
 # Data Pirates Challenge
 ![alt-text](https://github.com/bjuncklaus/pirates-challenge/blob/master/pirate-icon.png "pirate icon")
 ## Pirate English Version
+(_scroll down for English Version_)
+
 This me solution fer Neoway's [data pirates challenge](https://github.com/NeowayLabs/jobs/blob/master/datapirates/challengePirates.md).
 
 ### Requirements:
