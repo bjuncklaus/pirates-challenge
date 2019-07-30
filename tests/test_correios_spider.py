@@ -56,7 +56,7 @@ class TestCorreiosSpider(unittest.TestCase):
         actual = correios.is_uf_table(uf_selected)
         self.assertTrue(actual)
 
-    def test_set_record_loader_should_have_a_location(self):
+    def test_set_record_loader_should_have_a_localidade(self):
         correios = CorreiosSpider()
         filename = '../tests/resources/table_with_two_rows_and_four_columns.html'
         file = open(filename, "r")
@@ -66,7 +66,7 @@ class TestCorreiosSpider(unittest.TestCase):
         td_index = 0
         correios.set_record_loader(record_loader, selector, td_index)
 
-        self.assertIn('First column', record_loader.load_item()['location'][0])
+        self.assertIn('First column', record_loader.load_item()['localidade'][0])
         self.assertEqual(len(record_loader.load_item()), 1)
 
     def test_set_record_loader_should_have_a_zip(self):
@@ -79,7 +79,7 @@ class TestCorreiosSpider(unittest.TestCase):
         td_index = 1
         correios.set_record_loader(record_loader, selector, td_index)
 
-        self.assertIn('Second column', record_loader.load_item()['zip'][0])
+        self.assertIn('Second column', record_loader.load_item()['faixa_de_cep'][0])
         self.assertEqual(len(record_loader.load_item()), 1)
 
     def test_set_record_loader_should_have_no_data(self):
@@ -121,14 +121,14 @@ class TestCorreiosSpider(unittest.TestCase):
 
         correios.created_ufs[uf] = ufloader
 
-        record_loader.add_value('location', 'Location Address')
-        record_loader.add_value('zip', 'Zip Code')
+        record_loader.add_value('localidade', 'Location Address')
+        record_loader.add_value('faixa_de_cep', 'Zip Code')
 
         correios.set_record_item(record_loader, uf_selected=uf)
 
         self.assertIsNotNone(ufloader.load_item()['record'])
 
-    def test_set_record_item_should_have_record_with_new_location_and_zip_code(self):
+    def test_set_record_item_should_have_record_with_new_localidade_and_zip_code(self):
         correios = CorreiosSpider()
 
         ufloader = UfItemLoader(selector=Selector(text=''))
@@ -136,23 +136,23 @@ class TestCorreiosSpider(unittest.TestCase):
         ufloader.add_value(uf, 'Uf value')
 
         record_loader = RecordItemLoader(selector=Selector(text=''))
-        record_loader.add_value('location', 'Location Address')
-        record_loader.add_value('zip', 'Zip Code')
+        record_loader.add_value('localidade', 'Location Address')
+        record_loader.add_value('faixa_de_cep', 'Zip Code')
 
         ufloader.add_value('record', record_loader.load_item())
 
         correios.created_ufs[uf] = ufloader
 
         new_record_loader = RecordItemLoader(selector=Selector(text=''))
-        new_record_loader.add_value('location', 'New Location Address')
-        new_record_loader.add_value('zip', 'New Zip Code')
+        new_record_loader.add_value('localidade', 'New Location Address')
+        new_record_loader.add_value('faixa_de_cep', 'New Zip Code')
 
         correios.set_record_item(new_record_loader, uf_selected=uf)
 
-        self.assertEqual(len(ufloader.load_item()['record']['location']), 2)
-        self.assertEqual(len(ufloader.load_item()['record']['zip']), 2)
-        self.assertIn('New Location Address', ufloader.load_item()['record']['location'])
-        self.assertIn('New Zip Code', ufloader.load_item()['record']['zip'])
+        self.assertEqual(len(ufloader.load_item()['record']['localidade']), 2)
+        self.assertEqual(len(ufloader.load_item()['record']['faixa_de_cep']), 2)
+        self.assertIn('New Location Address', ufloader.load_item()['record']['localidade'])
+        self.assertIn('New Zip Code', ufloader.load_item()['record']['faixa_de_cep'])
 
     def test_set_ufitemloader_should_contain_an_uf(self):
         correios = CorreiosSpider()
@@ -180,8 +180,8 @@ class TestCorreiosSpider(unittest.TestCase):
         expected_ufloader.add_value(uf, 'Uf value')
 
         record_loader = RecordItemLoader(selector=Selector(text=''))
-        record_loader.add_value('location', 'Location Address')
-        record_loader.add_value('zip', 'Zip Code')
+        record_loader.add_value('localidade', 'Location Address')
+        record_loader.add_value('faixa_de_cep', 'Zip Code')
 
         expected_ufloader.add_value('record', record_loader.load_item())
 

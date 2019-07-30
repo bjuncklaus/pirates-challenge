@@ -5,8 +5,8 @@ from scrapy.loader.processors import TakeFirst, MapCompose, Compose
 
 
 class RecordItem(Item):
-    location = Field(input_processor=MapCompose(remove_tags))
-    zip = Field(input_processor=MapCompose(remove_tags, lambda string: string.strip()))
+    localidade = Field(input_processor=MapCompose(remove_tags))
+    faixa_de_cep = Field(input_processor=MapCompose(remove_tags, lambda string: string.strip()))
 
 
 class UfItem(Item):
