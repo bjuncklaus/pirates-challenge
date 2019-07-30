@@ -52,7 +52,8 @@ class CorreiosSpider(Spider):
         yield from self.yield_result(formdata, response, uf_selected)
 
     def yield_result(self, formdata, response, uf_selected):
-        next_page_form = response.xpath("//form[@name=" + FORMNAME_PROXIMA + "]").extract_first()
+        next_page_form = response.xpath("//form[@name=" + FORMNAME_PROXIMA + "]").get()
+
         if next_page_form is not None:
             yield FormRequest.from_response(response,
                                             formname=FORMNAME_PROXIMA,
