@@ -1,2 +1,2 @@
-scrapy==1.7.2
+scrapy==1.8.1
 requests==2.22.0
